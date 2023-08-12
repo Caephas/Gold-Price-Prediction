@@ -1,6 +1,7 @@
 # Gold Price Prediction Using RandomForestRegressor
 
 This project is about predicting the price of gold using various features like silver price, amount of gold in stock, etc., with the help of RandomForestRegressor from Scikit-Learn.
+The main focus is on the comparison between the RandomForestRegressor and a simple neural network model.
 
 ## Table of Contents
 
@@ -44,6 +45,25 @@ The model's performance is evaluated using the R-squared error on the test datas
 
 A visualization is constructed to compare actual gold prices with the predicted values from the model.
 
----
+## Analysis
+Upon analyzing and training models on the dataset, we found a significant difference in performance:
+
+RandomForestRegressor: Achieved an R-squared error of approximately 
+R2 =0.9885
+Neural Network: Achieved an R-squared error of approximately 
+R 2=0.1891
+
+## Discussion
+
+The RandomForestRegressor provided a significantly better fit to the dataset compared to the neural network model. Here are some potential reasons:
+
+Complexity and Overfitting: Neural networks, given their ability to capture complex relationships, can sometimes overfit to training data, especially if not properly regularized or if trained for too many epochs.
+Data Preprocessing: Neural networks often benefit from normalized input data. If data isn't preprocessed correctly, the performance can be suboptimal.
+Model Architecture: The chosen architecture of the neural network (number of layers, neurons, activation functions, etc.) might not be ideal for this particular dataset.
+Inherent Suitability: Some datasets or problems are inherently better suited for certain algorithms. In this case, the nature of the dataset might align more with the decision-tree-based approach of random forests than with the neural network model we used.
+
+## Conclusion
+
+While neural networks are a powerful tool and have shown excellent performance on a wide range of problems, they are not always the best choice for every dataset or problem. In this instance, the RandomForestRegressor was better suited for predicting gold prices from the given dataset. Further fine-tuning and experimenting with the neural network architecture, preprocessing steps, and training parameters might improve its performance.
 
 **Note**: To replicate or run the code provided in this project, ensure that you have all the dependencies installed and the dataset 'gld_price_data.csv' placed in the correct directory. 
